@@ -4,16 +4,22 @@
 
 $(document).ready(function(){
 
-    var post = Data.getCurrentPost();
+    var post = Data.getCurrentPost(),
+        comments = Data.getPostComments();
 
-    var postTemplate = Handlebars.compile( $( '#post-page-tmpl' ).html() );
+    var postTemplate = Handlebars.compile( $( '#post-page-tmpl' ).html());
+    Handlebars.registerPartial( 'post-comment', $( '#post-comment-tmpl' ).html() );
+    Handlebars.registerPartial( 'post-related', $( '#post-related-tmpl' ).html() );
+
 
     function renderPost() {
         $('.content').html(
             postTemplate({
                 imgUrl: post.imgUrl,
                 description: post.description,
-                author: Data.getUser(post.userId).name
+                author: Data.getUser(post.userId).name,
+                comments: Data.getPostComments(),
+                related: Data.getRelatedPosts()
             })
         );
     }
