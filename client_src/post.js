@@ -4,13 +4,11 @@
 
 $(document).ready(function(){
 
-    var post = Data.getCurrentPost(),
-        comments = Data.getPostComments();
+    var post = Data.getCurrentPost();
 
     var postTemplate = Handlebars.compile( $( '#post-page-tmpl' ).html());
     Handlebars.registerPartial( 'post-comment', $( '#post-comment-tmpl' ).html() );
     Handlebars.registerPartial( 'post-related', $( '#post-related-tmpl' ).html() );
-
 
     function renderPost() {
         $('.content').html(

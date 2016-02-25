@@ -5,9 +5,8 @@
     <title>Post page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-
 <div class="layout">
     <div class="header">
         <div class="header-layout">
@@ -21,16 +20,9 @@
         </div>
     </div>
 
-    <div class="content">
-
-    </div>
-
-
-
-    <div class="footer">
-    </div>
+    <div class="content"></div>
+    <div class="footer"></div>
 </div>
-
 
   <!--____ TEMPLATES ____-->
 
@@ -40,18 +32,16 @@
         <div class="post__img-box">
             <img src="{{imgUrl}}" alt="" class="post__img">
         </div>
-
         <div class="post__description">
-            <span class="post__author-name">{{author}}: </span> {{{description}}}
+            <span class="post__author-name">{{author}}:</span> {{{description}}}
         </div>
-
     </div>
 
     <div class="comments">
         <h5 class="comments__title">Comments</h5>
         <ul class="comments__list">
             {{#each comments}}
-            {{> post-comment }}
+                {{> post-comment }}
             {{/each}}
         </ul>
     </div>
@@ -60,7 +50,7 @@
         <h5 class="related__title">Related posts</h5>
         <ul class="related__list">
             {{#each related}}
-            {{> post-related }}
+                {{> post-related }}
             {{/each}}
         </ul>
     </div>
@@ -83,14 +73,13 @@
     </li>
 </script>
 
-
 <!--SCRIPTS-->
+
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/underscore/underscore-min.js"></script>
 <script src="vendor/handlebars/handlebars.min.js"></script>
 <script src="data.js"></script>
 <script src="post.js"></script>
-
 
 </body>
 </html>
