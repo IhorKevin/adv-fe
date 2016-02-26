@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSONer</title>
+
+    <style>
+        body {
+            background-color: #eeeeee;
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            background-color: #ffffff;
+        }
+
+        .wrapper__text {
+            padding: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .wrapper__list {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .wrapper__row {
+            padding: 20px 5px;
+        }
+        .wrapper__row:nth-child(2n) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <p class="wrapper__text" id="json-box"></p>
+        <ul class="wrapper__list" id="table-box"></ul>
+    </div>
+
+    <!--TEMPLATES-->
+
+    <script  type="text/x-handlebars-template" id="to-json-tmpl">
+        <pre>
+            {{toJSON posts}}
+        </pre>
+    </script>
+    <script  type="text/x-handlebars-template" id="table-tmpl">
+        {{#toTable posts}}
+            {{description}}
+        {{/toTable}}
+    </script>
+
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/handlebars/handlebars.min.js"></script>
+    <script src="data.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>
