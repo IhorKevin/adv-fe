@@ -16,4 +16,3 @@ gulp.task('libs', function () {
     return gulp.src('client_src/libs/**/*.*')
         .pipe(gulp.dest('client_build/libs'));
 });
-
