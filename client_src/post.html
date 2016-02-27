@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="layout">
+    <div class="header">
+        <div class="header-layout">
+            <div class="application-logo"></div>
+            <div class="application-text">
+                <div class="application-text__greeting">Welcome dude</div>
+                <div class="application-text__cta">Let's share photo with all world</div>
+            </div>
+            <div class="user-menu">
+            </div>
+        </div>
+    </div>
+
+    <div class="content"></div>
+    <div class="footer"></div>
+</div>
+
+  <!--____ TEMPLATES ____-->
+
+<script type="text/x-handlebars-template" id="post-page-tmpl">
+
+    <div class="post">
+        <div class="post__img-box">
+            <img src="{{imgUrl}}" alt="" class="post__img">
+        </div>
+        <div class="post__description">
+            <span class="post__author-name">{{author}}:</span> {{{description}}}
+        </div>
+    </div>
+
+    <div class="comments">
+        <h5 class="comments__title">Comments</h5>
+        <ul class="comments__list">
+            {{#each comments}}
+                {{> post-comment }}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="related">
+        <h5 class="related__title">Related posts</h5>
+        <ul class="related__list">
+            {{#each related}}
+                {{> post-related }}
+            {{/each}}
+        </ul>
+    </div>
+
+</script>
+
+<script type="text/x-handlebars-template" id="post-comment-tmpl">
+    <li class="comments__item">
+        <span class="comments__author-name">{{username}}:</span>
+        <span class="comments__text">{{text}}</span>
+    </li>
+</script>
+
+<script type="text/x-handlebars-template" id="post-related-tmpl">
+    <li class="related__item">
+        <div class="related__inner">
+            <img src="{{imgUrl}}" alt="" class="related__img">
+            <h6 class="related__post-title">{{description}}</h6>
+        </div>
+    </li>
+</script>
+
+<!--SCRIPTS-->
+
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/underscore/underscore-min.js"></script>
+<script src="libs/handlebars/handlebars.min.js"></script>
+<script src="data.js"></script>
+<script src="post.js"></script>
+
+</body>
+</html>

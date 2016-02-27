@@ -1,0 +1,35 @@
+{
+  "name": "ihorkevin-app",
+  "version": "0.0.1",
+  "description": "frontend course",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "axis": "^0.5.2",
+    "bower": "^1.7.7",
+    "del": "^2.2.0",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.1",
+    "imagemin": "^4.0.0",
+    "run-sequence": "^1.1.5",
+    "stylus": "^0.53.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IhorKevin/adv-fe.git"
+  },
+  "author": "IhorKevin <ihorkevin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IhorKevin/adv-fe/issues"
+  },
+  "homepage": "https://github.com/IhorKevin/adv-fe#readme"
+}

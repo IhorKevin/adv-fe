@@ -1,0 +1,26 @@
+{
+  "name": "ihorkevin-app",
+  "homepage": "https://github.com/IhorKevin/adv-fe",
+  "authors": [
+    "IhorKevin <ihorkevin@gmail.com>"
+  ],
+  "description": "Frontend course",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "1.8.3",
+    "backbone": "^1.*.*",
+    "react": ">0.1.0",
+    "angular": "x.x.x",
+    "handlebars": "^4.0.5",
+    "jquery": "^2.2.0"
+  }
+}
