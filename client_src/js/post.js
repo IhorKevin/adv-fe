@@ -2,7 +2,7 @@
  * Created by MOZ on 19.02.2016.
  */
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     var post = Data.getCurrentPost();
 
@@ -23,4 +23,5 @@ $(document).ready(function(){
     }
 
     renderPost();
+
 });
