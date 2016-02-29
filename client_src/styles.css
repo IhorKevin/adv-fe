@@ -42,7 +42,7 @@ a {
 
 .application-logo {
     float: left;
-    background: url( 'app_logo.png' ) no-repeat;
+    background: url('img/app_logo.png') no-repeat;
     background-size: 100px 100px;
     display: inline-block;
     width: 100px;
